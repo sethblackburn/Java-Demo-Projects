@@ -1,0 +1,110 @@
+import java.util.Scanner;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.println();
+        System.out.println("Welcome to Seth's Calculator 1.0.\n\nI can execute the four basic calculations on two numbers.");
+        System.out.println();
+
+        String command;
+
+        while (true) {
+            System.out.println("Type 'add', 'subtract', 'multiply', or 'divide', and press the ENTER key. Or type 'exit' and press ENTER to quit.");
+            System.out.print("Type your command here: " );
+            command = reader.next();
+
+            if (command.equalsIgnoreCase("add")) {
+                addition();
+            } else if (command.equalsIgnoreCase("subtract")) {
+                subtraction();
+            } else if (command.equalsIgnoreCase("multiply")) {
+                multiplication();
+            } else if (command.equalsIgnoreCase("divide")) {
+                division();
+            } else if (command.equalsIgnoreCase("exit")) {
+                break;
+            } else {
+                System.out.println();
+                System.out.println("I'm afraid I don't recognize your command. Let's try again.");
+                System.out.println();
+            }
+        }
+        System.out.println();
+        System.out.println("Thank you for using this calculator program. Farewell.");
+    }
+    private static void addition() {
+        Scanner reader = new Scanner(System.in);
+        double firstNumber;
+        double secondNumber;
+        double result;
+
+        System.out.println();
+        System.out.print("Type your first number: ");
+        firstNumber = reader.nextDouble();
+        System.out.print("Type your second number: ");
+        secondNumber = reader.nextDouble();
+
+        result = firstNumber + secondNumber;
+
+        System.out.println();
+        System.out.println(firstNumber + " + " + secondNumber + " = " + result);
+        System.out.println();
+    }
+    private static void subtraction() {
+        Scanner reader = new Scanner(System.in);
+        double firstNumber;
+        double secondNumber;
+        double result;
+
+        System.out.println();
+        System.out.print("Type your first number: ");
+        firstNumber = reader.nextDouble();
+        System.out.print("Type your second number: ");
+        secondNumber = reader.nextDouble();
+
+        result = firstNumber - secondNumber;
+
+        System.out.println();
+        System.out.println(firstNumber + " - " + secondNumber + " = " + result);
+        System.out.println();
+    }
+    private static void multiplication() {
+        Scanner reader = new Scanner(System.in);
+        double firstNumber;
+        double secondNumber;
+        double result;
+
+        System.out.println();
+        System.out.print("Type your first number: ");
+        firstNumber = reader.nextDouble();
+        System.out.print("Type your second number: ");
+        secondNumber = reader.nextDouble();
+
+        result = firstNumber * secondNumber;
+
+        System.out.println();
+        System.out.println(firstNumber + " x " + secondNumber + " = " + result);
+        System.out.println();
+    }
+    private static void division() {
+        Scanner reader = new Scanner(System.in);
+        double firstNumber;
+        double secondNumber;
+        double result;
+
+        System.out.println();
+        System.out.print("Type your first number: ");
+        firstNumber = reader.nextDouble();
+        System.out.print("Type your second number: ");
+        secondNumber = reader.nextDouble();
+
+        result = firstNumber / secondNumber;
+
+        System.out.println();
+        System.out.println(firstNumber + " / " + secondNumber + " = " + result);
+        System.out.println();
+    }
+}
