@@ -12,7 +12,7 @@ public class Calculator {
         String command;
 
         while (true) {
-            System.out.println("Type 'add', 'subtract', 'multiply', or 'divide', and press the ENTER key. Or type 'exit' and press ENTER to quit.");
+            System.out.println("Type 'add', 'subtract', 'multiply', or 'divide', and then press ENTER. Or type 'exit' and then press ENTER to quit.");
             System.out.print("Type your command here: " );
             command = reader.next();
 
