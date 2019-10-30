@@ -1,3 +1,6 @@
+// 29 Oct 2019; coded from scratch in about 30 min when a friend of mine who has a Master of Computer Science degree suggested
+// that making a calculator was good practice
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -16,7 +19,9 @@ public class Calculator {
             System.out.print("Type your command here: " );
             command = reader.next();
 
-            if (command.equalsIgnoreCase("add")) {
+// I love how using this setup makes the code clean.  By making each function its own method, the if-else-if chain is simple to manage.
+
+        if (command.equalsIgnoreCase("add")) {
                 addition();
             } else if (command.equalsIgnoreCase("subtract")) {
                 subtraction();
@@ -35,6 +40,10 @@ public class Calculator {
         System.out.println();
         System.out.println("Thank you for using this calculator program. Farewell.");
     }
+    
+// I only had to write the addition method from scratch.  I could then copy/paste the addition method and make minor changes to
+// create the other methods.
+    
     private static void addition() {
         Scanner reader = new Scanner(System.in);
         double firstNumber;
@@ -108,3 +117,5 @@ public class Calculator {
         System.out.println();
     }
 }
+
+// Going from "Hello World" to this in 4-5 weeks (3-4 hours a week) of study really gave me a sense that I had a good thing going.
