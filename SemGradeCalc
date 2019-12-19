@@ -1,0 +1,26 @@
+// Threw this together in about three minutes on 19 Dec 2019 when I was informed at the last minute that the new grading
+// software we were using would not calculate the semester grade.  Yes, it has a loop with no break, but that's because
+// I was just running it in the IDE test-bed and could manually stop it and because I was in a major get-this-done-and-
+// you-can-go-home-to-Christmas-break crunch.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        double firstNineWeeks;
+        double secondNineWeeks;
+        double semesterExam;
+
+        while (true) {
+            System.out.print("Enter 1st 9-Weeks Grade: ");
+            firstNineWeeks = reader.nextDouble();
+            System.out.print("Enter 2nd 9-Weeks Grade: ");
+            secondNineWeeks = reader.nextDouble();
+            System.out.print("Enter Semester Exam Grade: ");
+            semesterExam = reader.nextDouble();
+
+            System.out.println("The Semester grade: " + ((firstNineWeeks * 0.4) + (secondNineWeeks * 0.4) + (semesterExam * 0.2)));
+        }
+    }
+}
